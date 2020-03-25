@@ -1,0 +1,31 @@
+TokensStatisticsJob:
+    Db:
+        LogsConnString:
+            settings-key: TokensStatisticsService-LogsConnString
+            types:
+              - AzureTableStorage
+        MsSqlConnString:
+            settings-key: TokensStatisticsService-MsSqlConnString
+    RabbitMq:
+        RabbitMqConnectionString:
+            settings-key: WalletManagementRabbitMQ
+            types:
+              - RabbitMq
+    TokenDeviationTolerance:
+        settings-key: TokensStatisticsService-TokenDeviationTolerance
+
+PrivateBlockchainFacadeService:
+    ServiceUrl :
+        settings-key: PrivateBlockchainFacadeServiceUrl
+SlackNotifications:
+    AzureQueue:
+        ConnectionString:
+            settings-key: SlackNotificationsConnString
+            types:
+                - AzureTableStorage
+        QueueName:
+            settings-key: SlackQueueName
+MonitoringServiceClient:
+    MonitoringServiceUrl:
+        settings-key: MonitoringServiceUrl
+
