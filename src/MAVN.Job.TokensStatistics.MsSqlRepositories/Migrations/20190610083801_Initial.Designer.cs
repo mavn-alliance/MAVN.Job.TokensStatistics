@@ -22,7 +22,7 @@ namespace MAVN.Job.TokensStatistics.MsSqlRepositories.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Lykke.Job.TokensStatistics.MsSqlRepositories.Entities.DailyTokensSnapshotEntity", b =>
+            modelBuilder.Entity("MAVN.Job.TokensStatistics.MsSqlRepositories.Entities.DailyTokensSnapshotEntity", b =>
                 {
                     b.Property<string>("Date")
                         .ValueGeneratedOnAdd()
@@ -39,7 +39,7 @@ namespace MAVN.Job.TokensStatistics.MsSqlRepositories.Migrations
                     b.ToTable("daily_tokens_snapshot");
                 });
 
-            modelBuilder.Entity("Lykke.Job.TokensStatistics.MsSqlRepositories.Entities.LastTokensTotalAmountEntity", b =>
+            modelBuilder.Entity("MAVN.Job.TokensStatistics.MsSqlRepositories.Entities.LastTokensTotalAmountEntity", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
