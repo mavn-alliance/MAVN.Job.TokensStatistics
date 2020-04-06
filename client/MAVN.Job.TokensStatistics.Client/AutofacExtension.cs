@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Autofac;
 using JetBrains.Annotations;
 using Lykke.HttpClientGenerator;
@@ -30,7 +30,7 @@ namespace MAVN.Job.TokensStatistics.Client
             if (string.IsNullOrWhiteSpace(settings.ServiceUrl))
                 throw new ArgumentException("Value cannot be null or whitespace.", nameof(TokensStatisticsJobClientSettings.ServiceUrl));
 
-            var clientBuilder = HttpClientGenerator.HttpClientGenerator.BuildForUrl(settings.ServiceUrl)
+            var clientBuilder = HttpClientGenerator.BuildForUrl(settings.ServiceUrl)
                 .WithAdditionalCallsWrapper(new ExceptionHandlerCallsWrapper());
 
             clientBuilder = builderConfigure?.Invoke(clientBuilder) ?? clientBuilder.WithoutRetries();
