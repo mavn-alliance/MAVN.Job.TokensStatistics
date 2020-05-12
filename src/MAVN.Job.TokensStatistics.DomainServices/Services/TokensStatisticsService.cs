@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -10,9 +10,9 @@ using MAVN.Job.TokensStatistics.Domain.Extensions;
 using MAVN.Job.TokensStatistics.Domain.Models;
 using MAVN.Job.TokensStatistics.Domain.Repositories;
 using MAVN.Job.TokensStatistics.Domain.Services;
-using Falcon.Numerics;
-using Lykke.Service.PrivateBlockchainFacade.Client;
-using Lykke.Service.PrivateBlockchainFacade.Client.Models;
+using MAVN.Numerics;
+using MAVN.Service.PrivateBlockchainFacade.Client;
+using MAVN.Service.PrivateBlockchainFacade.Client.Models;
 using Polly;
 
 namespace MAVN.Job.TokensStatistics.DomainServices.Services

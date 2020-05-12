@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Falcon.Numerics;
+using MAVN.Numerics;
 
 namespace MAVN.Job.TokensStatistics.Domain.Models
 {

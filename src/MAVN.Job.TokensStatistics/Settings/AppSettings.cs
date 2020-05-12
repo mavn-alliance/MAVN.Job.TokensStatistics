@@ -1,6 +1,6 @@
-using MAVN.Job.TokensStatistics.Settings.JobSettings;
+﻿using MAVN.Job.TokensStatistics.Settings.JobSettings;
 using Lykke.Sdk.Settings;
-using Lykke.Service.PrivateBlockchainFacade.Client;
+using MAVN.Service.PrivateBlockchainFacade.Client;
 
 namespace MAVN.Job.TokensStatistics.Settings
 {

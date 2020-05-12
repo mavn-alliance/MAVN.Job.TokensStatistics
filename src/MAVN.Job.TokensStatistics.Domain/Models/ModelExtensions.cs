@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Falcon.Numerics;
-using Falcon.Numerics.Linq;
+using MAVN.Numerics;
+using MAVN.Numerics.Linq;
 
 namespace MAVN.Job.TokensStatistics.Domain.Models
 {

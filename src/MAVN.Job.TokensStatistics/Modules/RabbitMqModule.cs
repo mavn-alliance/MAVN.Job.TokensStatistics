@@ -1,4 +1,4 @@
-using Autofac;
+﻿using Autofac;
 using JetBrains.Annotations;
 using Lykke.Common;
 using MAVN.Job.TokensStatistics.DomainServices.Subscribers;
@@ -13,7 +13,6 @@ namespace MAVN.Job.TokensStatistics.Modules
         private const string QueueName = "tokensstatistics";
 
         private const string BonusReceivedExchangeName = "lykke.wallet.bonusreceived";
-        private const string PaymentTransferSucceededExchangeName = "lykke.wallet.successfulpaymenttransfer";
         private const string PartnersPaymentSucceededExchangeName = "lykke.wallet.successfulpartnerspayment";
 
         private readonly string _connString;
@@ -30,13 +29,6 @@ namespace MAVN.Job.TokensStatistics.Modules
                 .SingleInstance()
                 .WithParameter("connectionString", _connString)
                 .WithParameter("exchangeName", BonusReceivedExchangeName)
-                .WithParameter("queueName", QueueName);
-
-            builder.RegisterType<PaymentTransferSucceededSubscriber>()
-                .As<IStartStop>()
-                .SingleInstance()
-                .WithParameter("connectionString", _connString)
-                .WithParameter("exchangeName", PaymentTransferSucceededExchangeName)
                 .WithParameter("queueName", QueueName);
 
             builder.RegisterType<PartnersPaymentSucceededSubscriber>()

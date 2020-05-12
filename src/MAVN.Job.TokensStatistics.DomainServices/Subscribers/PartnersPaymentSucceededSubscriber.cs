@@ -1,9 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Common.Log;
 using Lykke.Common.Log;
 using MAVN.Job.TokensStatistics.Domain.Services;
 using Lykke.RabbitMqBroker.Subscriber;
-using Lykke.Service.WalletManagement.Contract.Events;
+using MAVN.Service.WalletManagement.Contract.Events;
 
 namespace MAVN.Job.TokensStatistics.DomainServices.Subscribers
 {

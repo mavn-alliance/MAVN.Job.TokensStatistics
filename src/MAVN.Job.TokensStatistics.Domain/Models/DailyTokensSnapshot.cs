@@ -1,7 +1,7 @@
 using System;
 using MAVN.Job.TokensStatistics.Domain.Enums;
 using MAVN.Job.TokensStatistics.Domain.Extensions;
-using Falcon.Numerics;
+using MAVN.Numerics;
 
 namespace MAVN.Job.TokensStatistics.Domain.Models
 {

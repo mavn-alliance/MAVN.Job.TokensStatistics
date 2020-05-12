@@ -1,10 +1,10 @@
 using System;
 using System.Threading.Tasks;
-using Lykke.Common.MsSql;
+using MAVN.Common.MsSql;
 using MAVN.Job.TokensStatistics.Domain.Models;
 using MAVN.Job.TokensStatistics.Domain.Repositories;
 using MAVN.Job.TokensStatistics.MsSqlRepositories.Entities;
-using Falcon.Numerics;
+using MAVN.Numerics;
 using Microsoft.EntityFrameworkCore;
 
 namespace MAVN.Job.TokensStatistics.MsSqlRepositories.Repositories
