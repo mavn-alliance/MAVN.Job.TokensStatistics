@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using MAVN.Job.TokensStatistics.Domain.Models;
-using Falcon.Numerics;
+using MAVN.Numerics;
 
 namespace MAVN.Job.TokensStatistics.MsSqlRepositories.Entities
 {

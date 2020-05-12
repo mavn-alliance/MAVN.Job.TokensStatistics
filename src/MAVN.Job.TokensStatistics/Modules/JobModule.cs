@@ -1,4 +1,4 @@
-using Autofac;
+﻿using Autofac;
 using JetBrains.Annotations;
 using Lykke.Common;
 using MAVN.Job.TokensStatistics.Domain.Services;
@@ -8,7 +8,7 @@ using MAVN.Job.TokensStatistics.Services;
 using MAVN.Job.TokensStatistics.Settings;
 using Lykke.Sdk;
 using Lykke.Sdk.Health;
-using Lykke.Service.PrivateBlockchainFacade.Client;
+using MAVN.Service.PrivateBlockchainFacade.Client;
 using Lykke.SettingsReader;
 
 namespace MAVN.Job.TokensStatistics.Modules

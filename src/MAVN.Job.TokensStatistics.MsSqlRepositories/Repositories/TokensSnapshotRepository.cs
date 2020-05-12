@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Lykke.Common.MsSql;
+using MAVN.Common.MsSql;
 using MAVN.Job.TokensStatistics.Domain.Models;
 using MAVN.Job.TokensStatistics.Domain.Repositories;
 using MAVN.Job.TokensStatistics.MsSqlRepositories.Entities;

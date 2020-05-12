@@ -1,6 +1,6 @@
 using JetBrains.Annotations;
 using MAVN.Job.TokensStatistics.Client.Enums;
-using Falcon.Numerics;
+using MAVN.Numerics;
 
 namespace MAVN.Job.TokensStatistics.Client.Models.Responses
 {

@@ -1,6 +1,6 @@
 using Autofac;
 using JetBrains.Annotations;
-using Lykke.Common.MsSql;
+using MAVN.Common.MsSql;
 using MAVN.Job.TokensStatistics.Domain.Repositories;
 using MAVN.Job.TokensStatistics.MsSqlRepositories;
 using MAVN.Job.TokensStatistics.MsSqlRepositories.Repositories;

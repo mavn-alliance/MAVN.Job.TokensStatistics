@@ -2,7 +2,7 @@ using System;
 using System.Threading.Tasks;
 using MAVN.Job.TokensStatistics.Domain.Enums;
 using MAVN.Job.TokensStatistics.Domain.Models;
-using Falcon.Numerics;
+using MAVN.Numerics;
 
 namespace MAVN.Job.TokensStatistics.Domain.Services
 {

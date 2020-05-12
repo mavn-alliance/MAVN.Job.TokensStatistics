@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using MAVN.Job.TokensStatistics.Domain.Enums;
 using MAVN.Job.TokensStatistics.Domain.Models;
@@ -6,8 +6,8 @@ using MAVN.Job.TokensStatistics.Domain.Repositories;
 using MAVN.Job.TokensStatistics.DomainServices.Services;
 using Lykke.Logs;
 using Lykke.Logs.Loggers.LykkeConsole;
-using Lykke.Service.PrivateBlockchainFacade.Client;
-using Lykke.Service.PrivateBlockchainFacade.Client.Models;
+using MAVN.Service.PrivateBlockchainFacade.Client;
+using MAVN.Service.PrivateBlockchainFacade.Client.Models;
 using Moq;
 using Xunit;
 
