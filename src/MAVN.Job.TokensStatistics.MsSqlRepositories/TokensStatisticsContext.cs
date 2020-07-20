@@ -1,13 +1,13 @@
-using System.Data.Common;
+﻿using System.Data.Common;
 using JetBrains.Annotations;
-using MAVN.Common.MsSql;
 using MAVN.Job.TokensStatistics.MsSqlRepositories.Entities;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace MAVN.Job.TokensStatistics.MsSqlRepositories
 {
-    public class TokensStatisticsContext : MsSqlContext
+    public class TokensStatisticsContext : PostgreSQLContext
     {
         private const string Schema = "tokens_statistics";
 
@@ -30,12 +30,12 @@ namespace MAVN.Job.TokensStatistics.MsSqlRepositories
         {
         }
 
-        protected override void OnLykkeConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnMAVNConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.ConfigureWarnings(cfg => cfg.Ignore(RelationalEventId.QueryClientEvaluationWarning));
         }
 
-        protected override void OnLykkeModelCreating(ModelBuilder modelBuilder)
+        protected override void OnMAVNModelCreating(ModelBuilder modelBuilder)
         {
         }
     }

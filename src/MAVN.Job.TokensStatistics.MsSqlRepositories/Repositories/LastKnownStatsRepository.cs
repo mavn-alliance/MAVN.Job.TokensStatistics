@@ -1,19 +1,19 @@
-using System;
+﻿using System;
 using System.Threading.Tasks;
-using MAVN.Common.MsSql;
 using MAVN.Job.TokensStatistics.Domain.Models;
 using MAVN.Job.TokensStatistics.Domain.Repositories;
 using MAVN.Job.TokensStatistics.MsSqlRepositories.Entities;
 using MAVN.Numerics;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using Microsoft.EntityFrameworkCore;
 
 namespace MAVN.Job.TokensStatistics.MsSqlRepositories.Repositories
 {
     public class LastKnownStatsRepository : ILastKnownStatsRepository
     {
-        private readonly MsSqlContextFactory<TokensStatisticsContext> _contextFactory;
+        private readonly PostgreSQLContextFactory<TokensStatisticsContext> _contextFactory;
 
-        public LastKnownStatsRepository(MsSqlContextFactory<TokensStatisticsContext> contextFactory)
+        public LastKnownStatsRepository(PostgreSQLContextFactory<TokensStatisticsContext> contextFactory)
         {
             _contextFactory = contextFactory;
         }

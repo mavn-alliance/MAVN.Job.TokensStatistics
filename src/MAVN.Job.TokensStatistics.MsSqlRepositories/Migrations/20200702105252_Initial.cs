@@ -1,6 +1,6 @@
-using System;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace MAVN.Job.TokensStatistics.MsSqlRepositories.Migrations
 {
@@ -17,7 +17,10 @@ namespace MAVN.Job.TokensStatistics.MsSqlRepositories.Migrations
                 columns: table => new
                 {
                     date = table.Column<string>(nullable: false),
-                    total_tokens = table.Column<long>(nullable: false),
+                    total_tokens = table.Column<string>(nullable: false),
+                    total_tokens_in_customers_wallets = table.Column<string>(nullable: false),
+                    total_earned_tokens = table.Column<string>(nullable: false),
+                    total_burned_tokens = table.Column<string>(nullable: false),
                     timestamp = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
@@ -31,8 +34,11 @@ namespace MAVN.Job.TokensStatistics.MsSqlRepositories.Migrations
                 columns: table => new
                 {
                     Id = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    last_total_amount = table.Column<long>(nullable: false),
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    last_total_amount = table.Column<string>(nullable: false),
+                    last_total_tokens_in_customers_wallets = table.Column<string>(nullable: false),
+                    last_earned_amount = table.Column<string>(nullable: false),
+                    last_burned_amount = table.Column<string>(nullable: false),
                     timestamp = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>

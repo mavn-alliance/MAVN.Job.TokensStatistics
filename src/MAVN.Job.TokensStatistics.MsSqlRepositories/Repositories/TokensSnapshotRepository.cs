@@ -1,20 +1,20 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MAVN.Common.MsSql;
 using MAVN.Job.TokensStatistics.Domain.Models;
 using MAVN.Job.TokensStatistics.Domain.Repositories;
 using MAVN.Job.TokensStatistics.MsSqlRepositories.Entities;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using Microsoft.EntityFrameworkCore;
 
 namespace MAVN.Job.TokensStatistics.MsSqlRepositories.Repositories
 {
     public class TokensSnapshotRepository : ITokensSnapshotRepository
     {
-        private readonly MsSqlContextFactory<TokensStatisticsContext> _contextFactory;
+        private readonly PostgreSQLContextFactory<TokensStatisticsContext> _contextFactory;
 
-        public TokensSnapshotRepository(MsSqlContextFactory<TokensStatisticsContext> contextFactory)
+        public TokensSnapshotRepository(PostgreSQLContextFactory<TokensStatisticsContext> contextFactory)
         {
             _contextFactory = contextFactory;
         }
@@ -57,7 +57,7 @@ namespace MAVN.Job.TokensStatistics.MsSqlRepositories.Repositories
             using (var context = _contextFactory.CreateDataContext())
             {
                 var result = await context.DailyTokensSnapshots
-                    .Where(s => DateTime.Parse(s.Date) >= fromDate && DateTime.Parse(s.Date) <= toDate)
+                    .Where(s => (DateTime)(object)s.Date >= fromDate && (DateTime)(object)s.Date <= toDate)
                     .Select(s => new DailyTokensSnapshot
                     {
                         TotalTokensAmount = s.TotalTokens,
